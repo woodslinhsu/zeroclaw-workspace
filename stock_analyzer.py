@@ -131,8 +131,7 @@ def fetch_us_prices() -> str:
             results.append(f"{ticker}: ${price:.2f} {arrow}{abs(change):.2f} ({pct:+.2f}%)")
         except Exception as e:
             results.append(f"{ticker}: 查詢失敗({e})")
-    return "
-".join(results)
+    return "\n".join(results)
 
 # ── 財經新聞 ──────────────────────────────────────
 def fetch_news() -> str:
