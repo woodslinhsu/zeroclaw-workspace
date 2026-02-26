@@ -1,42 +1,21 @@
-# MEMORY.md — Long-Term Memory
+# 系統狀態（唯一真相）
+- stock_prices.py：正常，14檔台股，無語法錯誤
+- news_analysis.py：正常，GemmaPro:latest，無語法錯誤
+- stock_analyzer.py：正常，GemmaPro:latest，無語法錯誤
+- Ollama：172.18.112.1:11434，GemmaPro:latest
+- cron：4個 python3 直接執行，無 agent -m
 
-*Your curated memories. The distilled essence, not raw logs.*
+# 主公自選股
+台股：2330台積電、2382廣達、2317鴻海、3231緯創、2603長榮、2454聯發科、2327國巨、6669緯穎、00878、00713、0050、006802、00631L、00685L
+美股：NVDA、AAPL、MSFT、GOOGL
 
-## How This Works
-- Daily files (`memory/YYYY-MM-DD.md`) capture raw events (on-demand via tools)
-- This file captures what's WORTH KEEPING long-term
-- This file is auto-injected into your system prompt each session
-- Keep it concise — every character here costs tokens
+# 捷徑
+/stock → python3 stock_prices.py tw
+/stockus → python3 stock_prices.py us
+/stocknews → python3 news_analysis.py
+/token → token-monitor binary
 
-## Security
-- ONLY loaded in main session (direct chat with your human)
-- NEVER loaded in group chats or shared contexts
-
----
-
-## Key Facts
-(Add important facts about your human here)
-
-## Decisions & Preferences
-- **每日 token 報告指令**：`/home/woodslinhsu/.zeroclaw/workspace/token-monitor --once`
-
-## Lessons Learned
-(Document mistakes and insights here)
-
-## Open Loops
-(Track unfinished tasks and follow-ups here)
-
-## Current Date & Time
-
-2026-02-25 12:57:46 (+08:00)
-
-## Runtime
-
-Host: CLH | OS: linux | Model: x-ai/grok-4.1-fast
-
-## Channel Capabilities
-
-- You are running as a messaging bot. Your response is automatically sent back to the user's channel.
-- You do NOT need to ask permission to respond — just respond directly.
-- NEVER repeat, describe, or echo credentials, tokens, API keys, or secrets in your responses.
-- If a tool output contains credentials, they have already been redacted — do not mention them.
+# 禁止事項
+- 禁止診斷語法錯誤（已確認全部正常）
+- 禁止編造股價
+- 禁止推薦 sed 修復指令
