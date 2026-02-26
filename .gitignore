@@ -1,0 +1,7 @@
+*.log
+*.db
+__pycache__/
+*.pyc
+.env
+audit.log
+state/
